@@ -2,10 +2,11 @@ import React from "react";
 import "./card.css";
 import { useData } from "../../context/DataContext";
 
-const Card = ({ data, flag }) => {
+const Card = ({ data, flag,code}) => {
   const { dispatch, state } = useData();
 
   const watch = state.watchlist.filter((ele) => ele.id === data.id);
+  const star = state.starred.filter((ele) => ele.id === data.id);
 
   return (
     <div className="cardContainer">
@@ -15,7 +16,21 @@ const Card = ({ data, flag }) => {
       <div className="textContainer">
         <h2>{data.title}</h2>
         <div className="smallFont displayFlexJust">{data.summary}</div>
-        <button> Star</button>
+       {code ? <button
+            onClick={(e) => {
+              dispatch({ type: "REMOVE_STAR", payload: data.id });
+              e.stopPropagation();
+            }}
+          >
+            Unstar
+          </button> : <button
+          onClick={(e) => {
+            dispatch({ type: "ADD_STAR", payload: data });
+            e.stopPropagation();
+          }}
+        >
+          {star.length === 0 ? "Star" : "Starred"}
+        </button>}
         {flag ? (
           <button
             onClick={(e) => {

@@ -3,7 +3,7 @@ import { v4 as uuid } from "uuid";
 
 export const initialState = {
   data: JSON.parse(localStorage.getItem("data")) ?? movies,
-  watchlist:  JSON.parse(localStorage.getItem("watchlist")) ?? [],
+  watchlist: JSON.parse(localStorage.getItem("watchlist")) ?? [],
   starred: JSON.parse(localStorage.getItem("star")) ?? [],
   selectGenre: "",
   year: "",
@@ -14,7 +14,7 @@ export const initialState = {
 export const reducer = (state, { type, payload }) => {
   switch (type) {
     case "SET_DATA": {
-        localStorage.setItem("data",JSON.stringify(state.data))
+      localStorage.setItem("data", JSON.stringify(state.data));
       return state;
     }
     case "SET_WATCH": {
@@ -59,6 +59,15 @@ export const reducer = (state, { type, payload }) => {
       return {
         ...state,
         watchlist: state.watchlist.filter(({ id }) => id !== payload),
+      };
+    }
+    case "ADD_STAR": {
+      return { ...state, starred: [...state.starred, payload] };
+    }
+    case "REMOVE_STAR": {
+      return {
+        ...state,
+        starred: state.starred.filter(({ id }) => id !== payload),
       };
     }
     default:
