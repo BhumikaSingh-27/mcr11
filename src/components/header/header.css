@@ -49,7 +49,7 @@
     justify-content: space-around;
 }
 
-.headerNav:hover {
+.headerNav div:hover {
     cursor: pointer;
     color: var(--clr-primary);
 }

@@ -2,9 +2,9 @@ import { movies } from "../data/data";
 import { v4 as uuid } from "uuid";
 
 export const initialState = {
-  data: movies,
-  watchlist: [],
-  starred: [],
+  data: JSON.parse(localStorage.getItem("data")) ?? movies,
+  watchlist:  JSON.parse(localStorage.getItem("watchlist")) ?? [],
+  starred: JSON.parse(localStorage.getItem("star")) ?? [],
   selectGenre: "",
   year: "",
   rating: "",
@@ -14,14 +14,15 @@ export const initialState = {
 export const reducer = (state, { type, payload }) => {
   switch (type) {
     case "SET_DATA": {
+        localStorage.setItem("data",JSON.stringify(state.data))
       return state;
     }
-    case "WATCH": {
+    case "SET_WATCH": {
       localStorage.setItem("watchlist", JSON.stringify(state.watchlist));
       return state;
     }
 
-    case "STAR": {
+    case "SET_STAR": {
       localStorage.setItem("star", JSON.stringify(state.starred));
       return state;
     }
