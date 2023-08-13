@@ -1,13 +1,134 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Courgette&family=Megrim&family=Montserrat+Alternates&family=Nunito+Sans:wght@500;700&family=Open+Sans:wght@400;700&family=Pacifico&family=Poor+Story&family=Poppins:wght@300;600&family=Prompt:ital,wght@0,400;1,300&family=Rampart+One&family=Roboto:ital,wght@0,400;0,900;1,400&family=Saira+Extra+Condensed:wght@300&family=Stick+No+Bills:wght@300;600&family=Work+Sans:wght@400;500&display=swap');
+
+:root {
+  --clr-primary: #FF3D00;
+  --clr-secondary: #FBE9E7;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 2.5rem;
+  --space-6: 3rem;
+  --font-xsm: 0.5rem;
+  --font-sm: 1rem;
+  --font-m: 1.5rem;
+  --font-l: 2rem;
+  --font-xl: 2.5rem;
+  --fw: 800;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
+
+* {
+  margin: 0;
+  /* padding: 0; */
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  /* font-family: 'Poppins', sans-serif; */
+  font-family: 'Work Sans', sans-serif;
+  background-color: var(--clr-secondary);
+  padding: var(--space-1);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/* general style */
+button {
+  background-color: var(--clr-primary);
+  border: none;
+  border-radius: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  color: white;
+  font-size: var(--font-sm);
+}
+
+button:hover {
+  background-color: var(--clr-secondary);
+  color: black;
+  outline: 2px solid var(--clr-primary);
+  cursor: pointer
+}
+
+/* utility classes */
+.btn-seconday {
+  background-color: var(--clr-secondary);
+  color: var(--clr-primary);
+  border: 2px solid var(--clr-primary);
+}
+
+.btn-seconday:hover {
+  border-width: 3px;
+}
+
+.center{
+  text-align: center;
+}
+
+.flexColumn{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.flexRow{
+  display: flex;
+  gap:1rem
+}
+
+/* small grey */
+.smallFont {
+  font-size: var(--font-xs);
+  color: grey;
+}
+
+/* display flex and justify */
+.displayFlexJust{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+  
