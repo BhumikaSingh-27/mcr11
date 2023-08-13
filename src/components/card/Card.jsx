@@ -16,6 +16,7 @@ const Card = ({ data, flag,code}) => {
       <div className="textContainer">
         <h2>{data.title}</h2>
         <div className="smallFont displayFlexJust">{data.summary}</div>
+        </div><div className="button">
        {code ? <button
             onClick={(e) => {
               dispatch({ type: "REMOVE_STAR", payload: data.id });

@@ -1,0 +1,10 @@
+.filter{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+   margin-bottom:2rem 
+}
+
+select{
+    width:10rem
+}

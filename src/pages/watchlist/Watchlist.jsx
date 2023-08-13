@@ -10,7 +10,7 @@ const Watchlist = () => {
   return (
     <div className="container">
       <h1>Watchlist</h1>
-      <div>
+      <div className="flexRow">
         {state.watchlist.length === 0 ? (
           <h3>Watchlist is empty</h3>
         ) : (

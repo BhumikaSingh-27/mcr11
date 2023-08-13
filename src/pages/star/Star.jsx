@@ -10,7 +10,7 @@ const Star = () => {
   return (
     <div className="container">
     <h1>Starred Movies</h1>
-    <div>
+    <div className='flexRow'>
       {state.starred.length === 0 ? (
         <h3>Starred list is empty</h3>
       ) : (

@@ -9,7 +9,9 @@
     right: 0;
     z-index: 5;
     display: flex;
+    gap:4rem;
     justify-content: space-between;
+    align-items: center;
     width: 100%;
 }
 
@@ -32,11 +34,11 @@
 /* search input */
 .searchInput {
     border: none;
-    width: 15rem;
+    width: 100%;
     padding: 0.5rem;
     font-size: var(--font-sm);
     border-radius: 0.2rem;
-    flex-grow: 1;
+   
 }
 
 .searchInput:focus {

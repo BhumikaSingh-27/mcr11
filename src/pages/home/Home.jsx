@@ -7,7 +7,7 @@ import { useNavigate } from "react-router";
 import Modal from "../../components/Modal/Modal";
 
 const Home = () => {
-  const { state, dispatch, isModal } = useData();
+  const { state } = useData();
   const navigate = useNavigate();
 
   const filterData = state.selectGenre
@@ -39,7 +39,8 @@ const Home = () => {
     <div className="home">
       
       <Filter />
-      <div className="flexRow">
+      <div className="displayFlex">
+      <div className="flexRow ">
         {final.length !== 0 ? (
           final?.map((ele) => (
             <div
@@ -55,6 +56,7 @@ const Home = () => {
           <h3>No movies found</h3>
         )}
       </div>
+    </div>
     </div>
   );
 };

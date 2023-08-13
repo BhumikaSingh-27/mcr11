@@ -11,16 +11,13 @@
 .cardContainer:hover {
     box-shadow: 0 0 5px 5px gray;
     cursor: pointer;
-}
 
-.imgContainer {
-    flex-grow: 1;
 }
 
 #img {
     object-fit: cover;
     width: 100%;
-    height: 100%;
+    height: 80%;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
 }
@@ -29,7 +26,7 @@
     padding:1rem;
     display: flex;
     flex-direction: column;
-    ;
+    flex-grow: 1;
 }
 
 
@@ -37,4 +34,10 @@
 .imgBox {
     width: 20rem;
     height: 20rem;
+}
+
+.button{
+    display: flex;
+    justify-content: space-around;
+    margin:1rem
 }

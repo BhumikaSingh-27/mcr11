@@ -1,6 +1,6 @@
 import React from "react";
 import { useData } from "../../context/DataContext";
-import Modal from "../Modal/Modal";
+import "./filter.css"
 
 const Filter = () => {
   const {
@@ -20,7 +20,7 @@ const Filter = () => {
   }, []);
 
   return (
-    <div>
+    <div className="filter">
     
       <h2>Movie</h2>
       <select

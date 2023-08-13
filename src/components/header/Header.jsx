@@ -17,7 +17,7 @@ const navigate =useNavigate()
           </em>
           <input
             type="text"
-            placeholder="enter"
+            placeholder="Search movies by title, cast and directors..."
             className="searchInput"
             onChange={(e) =>
               dispatch({ type: "SEARCH", payload: e.target.value })
