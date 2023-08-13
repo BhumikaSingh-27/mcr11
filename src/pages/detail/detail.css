@@ -1,0 +1,22 @@
+.detailContainer{
+    margin-top: 7rem;
+    width: 60rem;
+    height:fit-content;
+    display: flex;
+    gap: 1rem;
+    box-shadow: 0 0 2px 2px lightgray;
+    justify-content: center;
+    padding: 1rem;
+  
+}
+
+.div{
+    width:40rem;
+    height:40rem
+}
+
+.image{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
